@@ -25,8 +25,11 @@ This script is a Python implementation that:
 __Usage Instructions__
 
 To run this code:
+
 __1. Environment Setup:__ Ensure you have Python installed. The script uses PySpark, TensorFlow, Keras, scikit-learn, imblearn, pandas, numpy, matplotlib, and seaborn.
+
 __2. Dataset Placement:__ Place ECommerceDataset2.csv in the /content/drive/MyDrive/ML/ directory or update the spark.read.csv path accordingly.
+
 __3. Execution:__ Run the commerceforpeerj.py script. It can be executed in a Jupyter notebook or Google Colab environment.
 
 __Requirements__
@@ -63,14 +66,14 @@ lshamsi, A. (2022). Customer Churn prediction in ECommerce Sector. PhD thesis, R
 
 __Materials & Methods__
 
-Computing Infrastructure: The code was developed and executed in a Google Colab environment, which typically runs on a Linux operating system. The specific hardware (CPU, GPU, RAM) depends on the Colab instance allocated at runtime. The environment was set up with OpenJDK 8 for PySpark functionality.
-Evaluation Method: The proposed technique is primarily evaluated using K-fold cross-validation (specifically, 10-fold cross-validation) on the training data. This method helps to estimate the model's performance more robustly by training and evaluating the model on different subsets of the data. Additionally, a final evaluation is performed on a held-out test set to assess the generalization capability of the model on unseen data. The SMOTE oversampling technique is applied only to the training folds within the cross-validation loop to prevent data leakage.
-Assessment Metrics: The following assessment metrics are used to evaluate the model's performance, particularly relevant for imbalanced datasets:
-Accuracy: It measures the overall correctness of the model's predictions. It is a good general metric, but can be misleading in imbalanced datasets if the majority class dominates the predictions.
-Precision: It measures the proportion of correct identifications. In the context of churn, it indicates how many of the predicted churned customers actually churned.
-Recall: It measures the proportion of actual positives that were correctly identified. In the context of churn, it indicates how many of the actual churned customers the model successfully identified.
-F1-score: It is the harmonic mean of precision and recall. It provides a single metric that balances both precision and recall, which is particularly useful for imbalanced datasets where a high score indicates that the model has good performance on both identifying positive instances and not making too many false positive predictions.
-Loss: Binary Cross-Entropy is used as the loss function, which quantifies the error between the predicted probabilities and the true labels. Monitoring training and validation loss helps in detecting overfitting or underfitting.
+1. Computing Infrastructure: The code was developed and executed in a Google Colab environment, which typically runs on a Linux operating system. The specific hardware (CPU, GPU, RAM) depends on the Colab instance allocated at runtime. The environment was set up with OpenJDK 8 for PySpark functionality.
+2. Evaluation Method: The proposed technique is primarily evaluated using K-fold cross-validation (specifically, 10-fold cross-validation) on the training data. This method helps to estimate the model's performance more robustly by training and evaluating the model on different subsets of the data. Additionally, a final evaluation is performed on a held-out test set to assess the generalization capability of the model on unseen data. The SMOTE oversampling technique is applied only to the training folds within the cross-validation loop to prevent data leakage.
+3. Assessment Metrics: The following assessment metrics are used to evaluate the model's performance, particularly relevant for imbalanced datasets:
+* Accuracy: It measures the overall correctness of the model's predictions. It is a good general metric, but can be misleading in imbalanced datasets if the majority class dominates the predictions.
+* Precision: It measures the proportion of correct identifications. In the context of churn, it indicates how many of the predicted churned customers actually churned.
+* Recall: It measures the proportion of actual positives that were correctly identified. In the context of churn, it indicates how many of the actual churned customers the model successfully identified.
+* F1-score: It is the harmonic mean of precision and recall. It provides a single metric that balances both precision and recall, which is particularly useful for imbalanced datasets where a high score indicates that the model has good performance on both identifying positive instances and not making too many false positive predictions.
+* Loss: Binary Cross-Entropy is used as the loss function, which quantifies the error between the predicted probabilities and the true labels. Monitoring training and validation loss helps in detecting overfitting or underfitting.
 
 __Conclusions__
 
