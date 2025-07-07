@@ -46,15 +46,15 @@ __Requirements__
 __Methodology__
 
 The methodology involves:
-Data Loading: Reading the ECommerceDataset2.csv into a Spark DataFrame and converting it to a Pandas DataFrame.
-Exploratory Data Analysis (EDA): Visualizing the distribution of 'Churn', 'PreferredLoginDevice', 'Tenure', and 'CashbackAmount' to understand their relationship with churn.
-Feature Engineering and Scaling: In this stage, Categorical features (PreferredLoginDevice, PreferredPaymentMode, Gender, PreferedOrderCat, MaritalStatus) are converted to numerical representations using their index within a predefined list and then scaled. Numerical features (CustomerID, CityTier, NumberOfDeviceRegistered, SatisfactionScore, CashbackAmount, Complain, NumberOfAddress, Tenure, HourSpendOnApp, DaySinceLastOrder, CouponUsed, OrderCount, WarehouseToHome, OrderAmountHikeFromlastYear) are scaled by dividing by their respective maximum observed values or a suitable constant. Missing values are handled by assigning -1 and then scaling.
-Data Splitting: The dataset is split into training (75%) and testing (25%) sets, with the training set further divided into training (80%) and validation (20%) sets. Stratified splitting is used to maintain the proportion of churned and non-churned customers.
-Model Architecture: A sequential deep learning model is built with an input layer, several dense hidden layers with ReLU activation and dropout layers for regularization, and a final dense output layer with sigmoid activation for binary classification.
-Addressing Imbalance: SMOTE (Synthetic Minority Over-sampling Technique) is applied to the training data to create synthetic samples of the minority class (churned customers), thereby balancing the dataset.
-Model Training: The model is trained using the Adam optimizer and binary cross-entropy loss. K-fold cross-validation (with k=10) is used to robustly evaluate model performance.
-Model Evaluation: The trained model is evaluated on the test set using accuracy, precision, recall, and F1-score. A confusion matrix is also generated.
-Model Interpretability: SHAP (SHapley Additive exPlanations) is employed to explain the output of the model. SHAP values are used to visualize global feature importance (bar plot, beeswarm plot) and individual predictions (waterfall plot, force plot).
+1. __Data Loading:__ Reading the ECommerceDataset2.csv into a Spark DataFrame and converting it to a Pandas DataFrame.
+2. __Exploratory Data Analysis (EDA):__ Visualizing the distribution of 'Churn', 'PreferredLoginDevice', 'Tenure', and 'CashbackAmount' to understand their relationship with churn.
+3. __Feature Engineering and Scaling:__ In this stage, Categorical features (PreferredLoginDevice, PreferredPaymentMode, Gender, PreferedOrderCat, MaritalStatus) are converted to numerical representations using their index within a predefined list and then scaled. Numerical features (CustomerID, CityTier, NumberOfDeviceRegistered, SatisfactionScore, CashbackAmount, Complain, NumberOfAddress, Tenure, HourSpendOnApp, DaySinceLastOrder, CouponUsed, OrderCount, WarehouseToHome, OrderAmountHikeFromlastYear) are scaled by dividing by their respective maximum observed values or a suitable constant. Missing values are handled by assigning -1 and then scaling.
+4. __Data Splitting:__ The dataset is split into training (75%) and testing (25%) sets, with the training set further divided into training (80%) and validation (20%) sets. Stratified splitting is used to maintain the proportion of churned and non-churned customers.
+5. __Model Architecture:__ A sequential deep learning model is built with an input layer, several dense hidden layers with ReLU activation and dropout layers for regularization, and a final dense output layer with sigmoid activation for binary classification.
+6. __Addressing Imbalance:__ SMOTE (Synthetic Minority Over-sampling Technique) is applied to the training data to create synthetic samples of the minority class (churned customers), thereby balancing the dataset.
+7. __Model Training:__ The model is trained using the Adam optimizer and binary cross-entropy loss. K-fold cross-validation (with k=10) is used to robustly evaluate model performance.
+8. __Model Evaluation:__ The trained model is evaluated on the test set using accuracy, precision, recall, and F1-score. A confusion matrix is also generated.
+9. __Model Interpretability:__ SHAP (SHapley Additive exPlanations) is employed to explain the output of the model. SHAP values are used to visualize global feature importance (bar plot, beeswarm plot) and individual predictions (waterfall plot, force plot).
 
 __Citations__
 
