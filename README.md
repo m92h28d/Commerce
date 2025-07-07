@@ -6,28 +6,28 @@ This work aims to predict customer churn in an e-commerce dataset using a deep l
 
 __Dataset Information__ 
 
-he provided e-commerce dataset contains a comprehensive set of variables designed to capture various aspects of customer behavior and characteristics, ultimately aiming to predict customer churn. Key identifiers include CustomerID, a unique identifier for each customer, and Churn, a binary flag indicating whether a customer has churned. Customer engagement is measured by Tenure (customer's time with the organization), HourSpendOnApp (hours spent on the app/website), OrderCount (total orders placed), DaySinceLastOrder (days since last order), CouponUsed (coupons used), and CashbackAmount (average cashback received). Demographic and preference data include PreferredLoginDevice, CityTier, WarehouseToHome (distance from warehouse to home), PreferredPaymentMode, Gender,  PreferedOrderCat (preferred order category), and  MaritalStatus. Additional customer service and satisfaction indicators are SatisfactionScore, NumberOfAddress (total addresses added), NumberOfDeviceRegistered (total devices registered), Complain (any complaint raised), and OrderAmountHikeFromlastYear (percentage increase in order amount from last year). These variables collectively provide a rich dataset for analyzing and predicting customer churn.
+The provided e-commerce dataset contains a comprehensive set of variables designed to capture various aspects of customer behavior and characteristics, ultimately aiming to predict customer churn. Key identifiers include CustomerID, a unique identifier for each customer, and Churn, a binary flag indicating whether a customer has churned. Customer engagement is measured by Tenure (customer's time with the organization), HourSpendOnApp (hours spent on the app/website), OrderCount (total orders placed), DaySinceLastOrder (days since last order), CouponUsed (coupons used), and CashbackAmount (average cashback received). Demographic and preference data include PreferredLoginDevice, CityTier, WarehouseToHome (distance from warehouse to home), PreferredPaymentMode, Gender,  PreferedOrderCat (preferred order category), and  MaritalStatus. Additional customer service and satisfaction indicators are SatisfactionScore, NumberOfAddress (total addresses added), NumberOfDeviceRegistered (total devices registered), Complain (any complaint raised), and OrderAmountHikeFromlastYear (percentage increase in order amount from last year). These variables collectively provide a rich dataset for analyzing and predicting customer churn.
 
 __Code Information__
 
 This script is a Python implementation that:
-Loads and preprocesses the e-commerce dataset.
-Performs exploratory data analysis (EDA) including visualizations of churn distribution, preferred login device, tenure, and cashback amount.
-Transforms categorical and numerical features.
-Splits the data into training, validation, and testing sets.
-Builds and trains a sequential deep learning model using Keras.
-Applies SMOTE to the training data to handle class imbalance.
-Evaluates the model using K-fold cross-validation.
-Calculates and visualizes training and validation accuracy and loss.
-Generates a confusion matrix and reports accuracy, precision, recall, and F1-score.
-Utilizes SHAP for feature importance analysis and model interpretability.
+1. Loads and preprocesses the e-commerce dataset.
+2. Performs exploratory data analysis (EDA) including visualizations of churn distribution, preferred login device, tenure, and cashback amount.
+3. Transforms categorical and numerical features.
+4. Splits the data into training, validation, and testing sets.
+5. Builds and trains a sequential deep learning model using Keras.
+6. Applies SMOTE to the training data to handle class imbalance.
+7. Evaluates the model using K-fold cross-validation.
+8. Calculates and visualizes training and validation accuracy and loss.
+9. Generates a confusion matrix and reports accuracy, precision, recall, and F1-score.
+10. Utilizes SHAP for feature importance analysis and model interpretability.
 
 __Usage Instructions__
 
 To run this code:
-Environment Setup: Ensure you have Python installed. The script uses PySpark, TensorFlow, Keras, scikit-learn, imblearn, pandas, numpy, matplotlib, and seaborn.
-Dataset Placement: Place ECommerceDataset2.csv in the /content/drive/MyDrive/ML/ directory or update the spark.read.csv path accordingly.
-Execution: Run the commerceforpeerj.py script. It can be executed in a Jupyter notebook or Google Colab environment.
+__1. Environment Setup:__ Ensure you have Python installed. The script uses PySpark, TensorFlow, Keras, scikit-learn, imblearn, pandas, numpy, matplotlib, and seaborn.
+__2. Dataset Placement:__ Place ECommerceDataset2.csv in the /content/drive/MyDrive/ML/ directory or update the spark.read.csv path accordingly.
+__3. Execution:__ Run the commerceforpeerj.py script. It can be executed in a Jupyter notebook or Google Colab environment.
 
 __Requirements__
 
