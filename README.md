@@ -74,7 +74,11 @@ __Materials & Methods__
 
 __Conclusions__
 
-The dataset used in this work was for a leading e-commerce company, which was taken from Kaggle. This article started with examining and analyzing data to expand our understanding of customer churn. Where the highest correlation is between the CashbackAmount feature and the PreferedOrderCat feature. The dataset was imbalanced. The dataset was processed and balanced dataset from it to train the proposed model. It was found that the proposed model has the best accuracy when compared with the baseline. There are some limitations to this work, which are:
+The dataset used in this work was for a leading e-commerce company, which was taken from Kaggle. This article started with examining and analyzing data to expand our understanding of customer churn. Where the highest correlation is between the CashbackAmount feature and the PreferedOrderCat feature. The dataset was imbalanced. The dataset was processed and balanced dataset from it to train the proposed model. It was found that the proposed model has the best accuracy when compared with the baseline. 
+
+__Limitations__
+
+There are some limitations to this work, which are:
 * __Dataset Size and Scope:__ The analysis is based on a specific e-commerce dataset, and the generalizability of the findings and the model's performance to other e-commerce platforms or different customer demographics might be limited.
 * __Static Analysis:__ The current analysis is based on a static dataset.
 * __SMOTE Application:__ While SMOTE effectively addresses class imbalance, it generates synthetic samples, which might not perfectly represent real-world data points and could potentially introduce noise or overfitting to the synthetic data. 
