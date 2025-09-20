@@ -1,4 +1,4 @@
-A deep learning architecture for analyzing and predicting customer churn data in e-commerce
+
 
 __Description__
 
